@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Calculos</title>
+    <title>Calculos de esfera</title>
     <?php
-    function calcular($num1,$num2,$operacao){
-    if($operacao=="soma"){
-        $result = $num1 + $num2;
-    }else if($operacao=="subtracao"){
-        $result = $num1 - $num2;
-    }else if($operacao=="multiplicacao"){
-        $result = $num1 * $num2;
-    }else if($operacao=="divisao"){
-        $result = $num1 / $num2;
-    }else if($operacao=="resto"){
-        $result = $num1 % $num2;
+    const PI = 3.141592;
+    function Area($raio){
+    $result = 4*PI*($raio**2);
+    echo("<br>Área = ".number_format($result,4,",",".")." U²");
     }
-    echo("<br>Resultado = ".$result);
-
-}
+    function Volume($raio){
+        $result = 4/3*PI*($raio**3);
+        echo("<br>Volume = ".number_format($result,4,",",".")." U³");
+        }
     
 ?>
 </head>
 <body style="padding: 10px;">
-    <form class="formulario" action="Calculos.php" method="get">
-        <label>Número 1: </label><input type="" name="nota1" value=0>
-        <label><br>Número 2: </label><input type="" name="nota2" value=0>
-        <br><br>
-        <input type="radio" name="operacao" value="soma"><label>Soma </label>
-        <input type="radio" name="operacao" value="subtracao"><label>Subtração </label>
-        <input type="radio" name="operacao" value="multiplicacao"><label>Multiplicação </label>
-        <input type="radio" name="operacao" value="divisao"><label>Divisão </label>
-        <input type="radio" name="operacao" value="resto"><label>Resto </label>
+    <form class="formulario" action="Esfera.php" method="get">
+        <label>Raio: </label><input type="" name="Raio" value=0>
         <br><br><input id="enviar" type="submit"><br>
-        <?php if (isset($_GET["nota1"]) && isset($_GET["operacao"])) {
-        calcular($_GET["nota1"],$_GET["nota2"],$_GET["operacao"]);
-    } ?>
+        <?php if (isset($_GET["Raio"])){
+        Area($_GET["Raio"]);} ?>
+        <br>
+        <?php if (isset($_GET["Raio"])){
+        Volume($_GET["Raio"]);} ?>
+        <p>*U: unidade de medida inserida</p>
     </form>
 </body>
 </html> 
