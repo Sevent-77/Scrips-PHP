@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculos</title>
+    <link rel="stylesheet" href="style.css">
     <?php
     function calcular($num1,$num2,$operacao){
     if($operacao=="soma"){
@@ -23,6 +24,7 @@
 ?>
 </head>
 <body style="padding: 10px;">
+<h1>Calcular</h1>
     <form class="formulario" action="Calculos.php" method="get">
         <label>Número 1: </label><input type="" name="nota1" value=0>
         <label><br>Número 2: </label><input type="" name="nota2" value=0>

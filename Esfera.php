@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculos de esfera</title>
+    <link rel="stylesheet" href="style.css">
     <?php
     const PI = 3.141592;
     function Area($raio){
@@ -17,6 +18,7 @@
 ?>
 </head>
 <body style="padding: 10px;">
+<h1>Esferas</h1>
     <form class="formulario" action="Esfera.php" method="get">
         <label>Raio: </label><input type="" name="Raio" value=0>
         <br><br><input id="enviar" type="submit"><br>
