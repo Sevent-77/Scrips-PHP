@@ -21,6 +21,7 @@ input{
     margin-top: 12px;
     text-decoration: none;
     transition: background 0.4s;
+    border-color: rgb(0, 23, 9);
 }
 #enviar:hover{
     background-color: rgb(138, 244, 182);
@@ -55,4 +56,11 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
     font-size: 50px;
+}
+.valor {
+    display: inline-block;
+    font-weight: bold;
+}
+.intervalo {
+    width: 60%;
 }
