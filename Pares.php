@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Intervalo de Números</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <script>
         function atualizarValorRange(valor,name) {
             //função para atualizar os números no mostrador
@@ -65,8 +65,8 @@
         $inicio = $_GET['valor-inicio'];
         $fim = $_GET['valor-fim']; 
         
-        // Checar se o inicio e o fim condisem
-        if ($inicio <= $fim){
+        // Checar se o inicio e o fim condisem e se é maior que zero
+        if ($inicio <= $fim and $inicio >= 0){
             
             // Verifica se o valor é válido
             if($inicio % 2 == 1){
